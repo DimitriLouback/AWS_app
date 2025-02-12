@@ -1,0 +1,11 @@
+# Ignorar arquivo de configuração
+config.env
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+.env
