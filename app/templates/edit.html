@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Pessoa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="number"] {
+            padding: 8px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Editar Pessoa</h1>
+
+    
+    <form action="/edit/{{ pessoa.id }}" method="POST">
+        <input type="text" name="nome" value="{{ pessoa.name }}" required>
+        <input type="number" name="idade" value="{{ pessoa.age }}" required>
+        <button type="submit">Salvar</button>
+    </form>
+
+    <a href="/">Voltar</a>
+</body>
+</html>
